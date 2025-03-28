@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Marketing Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive marketing landing page built with React, TypeScript, and Tailwind CSS that redirects users to an external API service for authentication.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design that works on mobile, tablet, and desktop
+- React with TypeScript for type safety
+- Tailwind CSS for modern styling
+- Direct redirection to API service (localhost:3001) for authentication
+- Contact form
+- Pricing section
+- Feature showcase
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+landing-page/
+├── public/                  # Public assets
+├── src/
+│   ├── components/          # UI components
+│   ├── contexts/            # React context providers (simplified)
+│   ├── pages/               # Page components
+│   ├── styles/              # CSS styles
+│   ├── App.tsx              # Main App component
+│   └── index.tsx            # Entry point
+└── README.md                # This file
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Important Note
 
-### `npm test`
+This project has been simplified to function as a static landing page only. The server-side authentication has been removed, and all authentication is now handled by redirecting users to the external API service at localhost:3001.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. For development:
+   - Run the React dev server: `npm start` (runs on port 3003)
+4. For production:
+   - Build the React app: `npm run build`
+   - Deploy the contents of the `build` directory to any static web server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development and Production Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In development, the application runs as a React dev server on port 3003 (front-end only). All authentication and API functionality is handled by redirecting to the API service at localhost:3001.
 
-### `npm run eject`
+### Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In production, the built React app can be served from any static web server or CDN. It does not require any server-side components as it functions as a static landing page.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Service
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+After clicking login or sign up, users are redirected to the API service running at `http://localhost:3001/api/auth/login` for authentication.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Customization
 
-## Learn More
+- Change the color scheme by editing the Tailwind configuration in `tailwind.config.js`
+- Replace placeholder content in the components
+- Add additional pages or sections as needed
+- Modify the authentication behavior in the server code
+- Configure the admin portal URL in the `.env` file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is MIT licensed.
